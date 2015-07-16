@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="en-US">
+<head>
+  <title>Bootstrap Case</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+  <script src="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/js/bootstrap.min.js"></script>
+</head>
+<style>
+table, th , td  {
+  border: 1px solid grey;
+  border-collapse: collapse;
+  padding: 5px;
+}
+table tr:nth-child(odd)	{
+  background-color: #f1f1f1;
+}
+table tr:nth-child(even) {
+  background-color: #ffffff;
+}
+</style>
+<script src= "http://ajax.googleapis.com/ajax/libs/angularjs/1.3.14/angular.min.js"></script>
+
+<title>
+Welcome to My Hometown  
+</title>
+
+<body>
+ 
+<div id="header" " style="background-color:skyblue">
+<h1 style="font-family:verdana"; style="color:black"> <b> Welcome to My Hometown-Binh Dinh, Vietnam </b> </h1>
+<img src="pic2.jpg" alt="Ocean View" style="width:600px; height:300px"
+<nav class="navbar navbar-default">
+  <div class="container-fluid">
+    <div class="navbar-header">
+      <a class="navbar-brand" href="#">My Hometown</a>
+    </div>
+    <div>
+      <ul class="nav navbar-nav">
+        <li class="active"><a href="index.html">Home</a></li>
+        <li><a href="food.html">Food</a></li>
+        <li><a href="placetogo.html">Places to Visit</a></li>
+        <li><a href="#">Hotel</a></li>
+      </ul>
+    </div>
+  </div>
+</nav>
+
+<div class="container">
+  <div class="jumbotron">
+    <h1>Welcome!</h1>      
+    <p>Binh Dinh is located on the coast of Central Vietnam and is divided in four clear-cut regions: highlands, midlands, plains, and coast. It is bordered by Quang Ngai to the north, Phu Yen to the south, the East Sea to the east, and Gia Lai to the west. Binh Dinh is 1,655 km from Hanoi and is accessible either by car, train, or plane. The main ethnic groups in this area are the Kinh, Ba Na, Lo, and Cham.
+
+The annual average temperature is 26 degree C. The dry season lasts from December to August, and the rainy season, from September to November.
+
+Special products of the province: silk, swallow nest, shrimp, fish, precious wood, vegetable oil, rice, marble, titanium, and handicraft articles. Binh Dinh is also the home of old folk opera, and Bai Choi folk songs.
+
+The many historical sites include the Cham Tower, Duong Long Tower, Doi Tower, and Quang Trung Museum. The region also offers plenty of beautiful landscapes such as Quy Hoa, Hoi Van, Thi Nai Lowland, and Ham Mo Springs.
+
+Quy Nhon, the capital city of Binh Dinh province is 1,065 km from Hanoi on National Highway 1. In the old day Quy Nhon was called Thi Nai, the name of a beautiful lake inside the city. 
+Quy Nhon is a seaside city whose port is accessible to 4,000 tons ships.</p>      
+    <a href="#" class="btn btn-info btn-lg"><span class="glyphicon glyphicon-search"></span> Search</a>
+  </div>
+
+  <div class="row">
+    <div class="col-md-3">
+      <p>A good banh xeo is a crispy crepe bulging with pork, shrimp, and bean sprouts, plus the garnish of fresh herbs that are characteristic of most authentic Vietnamese dishes.
+
+To enjoy one like a local, cut it into manageable slices, roll it up in rice paper or lettuce leaves and dunk it in whatever special sauce the chef has mixed up for you.</p>
+    </div>
+    <div class="col-md-3"> 
+      <p>Vietnamese egg coffee is technically a drink but we prefer to put it in the dessert category. The creamy soft, meringue-like egg white foam perched on the dense Vietnamese coffee will have even those who don’t normally crave a cup of joe licking their spoons with delight.</p>
+    </div>
+    <div class="col-md-3"> 
+      <p>Another hearty soup that is high on the lunchtime agenda, this is a crab and morning glory noodle soup. Canh bun is similar to the more well-known bun rieu crab soup, but has a small handful of variations -- including the type of noodle used.</p>
+    </div>
+    
+    </div>
+    <div class="clearfix visible-lg"></div>
+  </div>
+</div>
+</div>
+
+<div ng-app="myApp" ng-controller="personCtrl">
+
+<button ng-click="toggle()">Hide user</button>
+
+<p ng-show="myVar">
+First Name: <input type=text ng-model="person.firstName"><br>
+Last Name: <input type=text ng-model="person.lastName"><br><br>
+Full Name: {{person.firstName + " " + person.lastName}}
+</p>
+
+</div>
+
+<script>
+var app = angular.module('myApp', []);
+app.controller('personCtrl', function($scope) {
+    $scope.person = {
+        firstName: "Yen",
+        lastName: "Nguyen"
+    };
+    $scope.myVar = true;
+    $scope.toggle = function() {
+        $scope.myVar = !$scope.myVar;
+    };
+});
+</script> 
+
+
+
+
+<button onclick="myFunction()">Click Here</button>
+
+<script>
+function myFunction() {
+    var btn = document.createElement("BUTTON");
+    var t = document.createTextNode("yennguyen_sscc@yahoo.com");
+    btn.appendChild(t);
+    document.body.appendChild(btn);
+}
+</script>
+
+</body>
+</html>
